@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Router, Switch } from "react-router-dom";
+import Books from "./pages/Books";
+import Saved from "./pages/Saved";
+import Search from "./pages/Search";
+
 
 class App extends Component {
   render() {
@@ -9,7 +13,8 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route exact path="/" component={Books} />
-            <Route exact path="/books" component={Books} />
+            {/* <Route exact path="/search" component={Search} />
+            <Route exact path="/saved" component={Saved} /> */}
             <Route component={Books} />
           </Switch>
         </div>
