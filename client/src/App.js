@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
-import Saved from "./pages/Saved";
-import Search from "./pages/Search";
+import Nav from "./components/Nav";
 
 
 class App extends Component {

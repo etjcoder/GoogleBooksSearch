@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Search from "./Search";
+import Saved from "./Saved";
 
 class Books extends Component {
   state = {
@@ -17,7 +18,7 @@ class Books extends Component {
   };
 
   componentDidMount() {
-    this.loadBooks();
+    // this.loadBooks();
   }
 
 //   loadBooks = () => {
@@ -68,22 +69,7 @@ class Books extends Component {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
+            <Saved />
           </Col>
         </Row>
       </Container>
